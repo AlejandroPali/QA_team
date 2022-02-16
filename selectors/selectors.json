@@ -1,0 +1,33 @@
+{
+    "core" : {
+        "allow_loc_while_using_app" : "com.android.permissioncontroller:id/permission_allow_foreground_only_button",
+        "allow_loc_one_time" : "com.android.permissioncontroller:id/permission_allow_one_time_button",
+        "deny_loc_usage" : "com.android.permissioncontroller:id/permission_deny_button",
+        "allow_code" : "com.google.android.gms:id/positive_button",
+        "deny_code" : "com.google.android.gms:id/negative_button"
+    },
+    "onboarding" : {
+        "title" : "mx.app.baz.superapp:id/tv_title_onboarding",
+        "subtitle" : "mx.app.baz.superapp:id/tv_subtitle_onboarding",
+        "helped_by_assessor_text" : "mx.app.baz.superapp:id/tv_affirmation",
+        "helped_by_assessor_checkbox" : "mx.app.baz.superapp:id/switch_adviser",
+        "legal_text" : "mx.app.baz.superapp:id/textLegal",
+        "acept_button" : "mx.app.baz.superapp:id/button",
+        "same_number_text" : "mx.app.baz.superapp:id/tvSameNumber",
+        "same_number_yes" : "mx.app.baz.superapp:id/button",
+        "same_number_no" : "mx.app.baz.superapp:id/btnExit",
+        "otp_title" : "mx.app.baz.superapp:id/tv_code_title",
+        "otp_number" : "mx.app.baz.superapp:id/otp_et",
+        "otp_desc" : "mx.app.baz.superapp:id/otp_description_tv",
+        "send_again_code" : "mx.app.baz.superapp:id/tv_reenviar",
+        "continue_button" : "mx.app.baz.superapp:id/button"
+    },
+    "login_page" : {
+        "user_name" : "mx.app.baz.superapp:id/tvUserName",
+        "password_label" : "mx.app.baz.superapp:id/tvPasswordLabel",
+        "password_field" : "mx.app.baz.superapp:id/et_password",
+        "forgot_password_label" : "mx.app.baz.superapp:id/tvForgotPassword",
+        "recover_password_link" : "mx.app.baz.superapp:id/tvRecoverPassword",
+        "continue_button" : "mx.app.baz.superapp:id/button"
+    }
+}
