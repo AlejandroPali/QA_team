@@ -1,4 +1,4 @@
-Feature Encender_TDC
+Feature: Encender_TDC
 
         Scenario: turn on TDC screen
             Given I'm on the "Configuracion" page

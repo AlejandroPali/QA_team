@@ -1,4 +1,4 @@
-    Feature Pago_TDC
+    Feature: Pago_TDC
 
     Background: Pago de TDC
 

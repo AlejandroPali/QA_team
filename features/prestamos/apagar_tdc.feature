@@ -1,4 +1,4 @@
-    Feature Apagar_TDC
+    Feature: Apagar_TDC
 
         Scenario: turn off TDC screen
             Given I'm on the "Configuracion" page

@@ -1,4 +1,4 @@
-Feature Estado_Cuenta
+Feature: Estado_Cuenta
 
     Background: Estados de cuenta TDC
 
