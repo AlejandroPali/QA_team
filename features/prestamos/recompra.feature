@@ -25,10 +25,10 @@ Feature: Recompra
         When I click on continue button in Instruction screen number 1
         When I click on continue button in Instruction screen number 2
         When I click on continue button in Instruction screen number 3
-        When I´m on the Face recognition screen
+        When I'm on the Face recognition screen
         When I click on continue button
         And I focus my face in the camera
-        Then I verify the captured face is equal to evel´s face
+        Then I verify the captured face is equal to evel's face
         And I click on continue in Identity Confirmed screen
         And Best Offer page is display
 
@@ -119,7 +119,7 @@ Feature: Recompra
 
         Examples:
             | clave  |
-            | 147369 |
+            | 147369 '
 
     Scenario: Ticket screen
         Given I have provided the keycode
