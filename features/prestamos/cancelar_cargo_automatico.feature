@@ -1,7 +1,5 @@
 Feature: Cancelar_Cargo_Automatico
 
-    Background: Cargo Automatico en Configuracion
-
         Scenario: Automatic Charge Cancelation
             Given I'm in the "Credito" dashboard
             When I click on the 3 dots "Configuracion"

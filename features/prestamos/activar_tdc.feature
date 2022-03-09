@@ -24,12 +24,12 @@ Feature: Activar_TDC
                 | 103 |
 
 
-            Scenarion Outline: Keycode screen
+            Scenario Outline: Keycode screen
 
             Given I have land in the "Clave" page after
             And I have a number path to enter 6 digits
             And the message " Ingresar tu clave para continuar"
-            and the option "olvide mi clave" for those who forgot thir code
+            And the option "olvide mi clave" for those who forgot thir code
             When click to enter the code a number pad is launch
             And  enter keycode <clave>
             Then the keycode is verify
@@ -50,12 +50,12 @@ Feature: Activar_TDC
 
 
 
-            Scenarion Outline: Keycode screen
+            Scenario Outline: Second Keycode screen
 
             Given I have land in the "Clave" page after
             And I have a number path to enter 6 digits
             And the message " Ingresar tu clave para continuar"
-            and the option "olvide mi clave" for those who forgot thir code
+            And the option "olvide mi clave" for those who forgot thir code
             When click to enter the code a number pad is launch
             And  enter keycode <clave>
             Then the keycode is verify

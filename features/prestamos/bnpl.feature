@@ -2,7 +2,7 @@ Feature: BNPL
 
     Background: BNPL
 
-        Scenario: "Mis Pagos" screen
+        Scenario: Mis Pagos screen
 
             Given I'm at the "Mis Pagos" screen
             When I select make a Payment with QR
@@ -84,7 +84,7 @@ Feature: BNPL
             When I swipe to the right the "baz" button
             Then It lauch the "Clave" page
 
-        Scenario Outline: Keycode screen
+        Scenario Outline: Second Keycode screen
             Given I have land in the Clave page after
             And I have a number path to enter 6 digits
             And the message " Ingresar tu clave para continuar"
@@ -99,9 +99,9 @@ Feature: BNPL
                 | 147369 |
 
         Scenario: Ticket screen
-            Given IWm at the Ticket screen
+            Given I'm at the Ticket screen
             When I scroll down
-            When I click exit button
+            And I click exit button
             Then I it will lauch the main screen
             And i receive an email
 
