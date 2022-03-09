@@ -59,7 +59,7 @@
             When slide "baz" to the right to make the payment
             Then It lauch the "Clave" page
 
-            Scenarion Outline: Keycode screen
+            Scenario Outline: Keycode screen
 
             Given I have land in the "Clave" page after
             And I have a number path to enter 6 digits
