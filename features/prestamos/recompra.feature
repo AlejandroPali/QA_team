@@ -8,30 +8,8 @@ Feature: Recompra
         When I scroll down
         And the product banner is display
         When click on the banner
-        Then Benefits page is displayed
-
-    Scenario: Benefits screen
-        Given I have click the banner for "Recompra"
-        When I land in the benefits page
-        And the benefits are display
-        When i click on tooltip
-        And the Legal information is display
-        When I click on continue button
-        Then it will launch Face recognition
-
-    Scenario: Face recognition
-        Given I'm at the Face recognition Page
-        When I click on continue button
-        When I click on continue button in Instruction screen number 1
-        When I click on continue button in Instruction screen number 2
-        When I click on continue button in Instruction screen number 3
-        When I'm on the Face recognition screen
-        When I click on continue button
-        And I focus my face in the camera
-        Then I verify the captured face is equal to evel's face
-        And I click on continue in Identity Confirmed screen
-        And Best Offer page is display
-
+        Then Best Offer screen is displayed
+    
 
     Scenario: Best Offer screen(Personalizar credito)
         Given I have i have click on continue in the Benefit page
@@ -82,21 +60,7 @@ Feature: Recompra
         And the option to edit is under "Editar"
         And the details "Monto", "Plazo", "Pago digital", "Pago semanal con descuento", "Pago semanal"
         When Slide the "baz" button to the right
-        Then It lauch the "Clave" page
-
-    Scenario Outline: Keycode screen
-        Given I have land in the Clave page after
-        And I have a number path to enter 6 digits
-        And the message "Ingresar tu clave para continuar"
-        And the option "olvide mi clave" for those who forgot thir code
-        When click to enter the code a number pad is launch
-        And  enter keycode <clave>
-        Then the keycode is verify
-        And it will lauch the ticket page
-
-        Examples:
-            | clave  |
-            | 147369 |
+        Then It lauch the the Face recognition journey
 
     Scenario: Cash Credit screen(From Best Offer)
         Given I have land it in Summary page after clicking on "Lo quiero"
@@ -104,7 +68,20 @@ Feature: Recompra
         And the option to edit is under "Editar"
         And the details "Monto", "Plazo", "Pago digital", "Pago semanal con descuento", "Pago semanal"
         When Slide the "baz" button to the right
-        Then It lauch the "Clave" page
+        Then It lauch the Face recognition journey
+    
+    Scenario: Face recognition
+        Given I'm at the Face recognition Page
+        When I click on continue button
+        When I click on continue button in Instruction screen number 1
+        When I click on continue button in Instruction screen number 2
+        When I click on continue button in Instruction screen number 3
+        When I'm on the Face recognition screen
+        When I click on continue button
+        And I focus my face in the camera
+        Then I verify the captured face is equal to evel's face
+        And I click on continue in Identity Confirmed screen
+        And it will lauch the Keycode screen
 
 
     Scenario Outline: Keycode screen
@@ -119,7 +96,7 @@ Feature: Recompra
 
         Examples:
             | clave  |
-            | 147369 '
+            | 147369 |
 
     Scenario: Ticket screen
         Given I have provided the keycode
