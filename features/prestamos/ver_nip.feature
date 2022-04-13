@@ -1,4 +1,4 @@
-Feature: Ver NIP
+Feature: Ver_NIP
 
     Background Ver NIP
 
@@ -28,7 +28,7 @@ Feature: Ver NIP
             Given I have land in the "Clave" page after
             And I have a number path to enter 6 digits
             And the message " Ingresar tu clave para continuar"
-            and the option "olvide mi clave" for those who forgot thir code
+            And the option "olvide mi clave" for those who forgot thir code
             When click to enter the code a number pad is launch
             And  enter keycode <clave>
             Then the keycode is verify

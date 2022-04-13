@@ -60,7 +60,7 @@ Feature: Recompra
         And the option to edit is under "Editar"
         And the details "Monto", "Plazo", "Pago digital", "Pago semanal con descuento", "Pago semanal"
         When Slide the "baz" button to the right
-        Then It lauch the the Face recognition journey
+        Then It lauch the Face recognition journey
 
     Scenario: Cash Credit screen(From Best Offer)
         Given I have land it in Summary page after clicking on "Lo quiero"
@@ -73,15 +73,15 @@ Feature: Recompra
     Scenario: Face recognition
         Given I'm at the Face recognition Page
         When I click on continue button
-        When I click on continue button in Instruction screen number 1
+        And I click on continue button in Instruction screen number 1
         When I click on continue button in Instruction screen number 2
-        When I click on continue button in Instruction screen number 3
+        And I click on continue button in Instruction screen number 3
         When I'm on the Face recognition screen
-        When I click on continue button
+        And I click on continue button
         And I focus my face in the camera
-        Then I verify the captured face is equal to evel's face
+        When I verify the captured face is equal to evel's face
         And I click on continue in Identity Confirmed screen
-        And it will lauch the Keycode screen
+        Then it will lauch the Keycode screen
 
 
     Scenario Outline: Keycode screen

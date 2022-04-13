@@ -1,6 +1,6 @@
 Feature: Pago_Credimax
 
-    Background Pago de Credimax
+    Background: Pago de Credimax sin atraso
 
         Scenario: Personal Credit Details screen
             Given I'm in the personal credit details page
@@ -9,7 +9,7 @@ Feature: Pago_Credimax
             And I click on "Pagar"
             Then land in the "Pagar mis creditos" page
 
-        Scenario: Pay My Credits screen
+        Scenario: Pay My Credits screen 
             Given I'm in "Pagar mis creditos" page
             And the credit details are display
             When click on "Continuar"
@@ -58,7 +58,7 @@ Feature: Pago_Credimax
             And I have the option to select the payment
             When selecting "Otra cantidad" a number pad is display
             And  enter an amount <another_amount>
-            And the amount has to be greater then 0
+            And the amount has to be equals or  greater than 1 
             And less o equal the to amount to liquidate
             And click on "Continuar"
             Then land in summary page
@@ -67,7 +67,52 @@ Feature: Pago_Credimax
                 | another_amount |
                 | 1              |
 
+    Background: Pago de Credimax con atraso
 
+        Scenario: Pay My Credits screen (con atraso)
+            Given I'm in "Pagar mis creditos" page
+            And the credit details are display
+            And I'm late on my account 
+            When click on "Continuar"
+            Then land in "Pagar mis creditos" page
+            And the payments options are display
+
+        Scenario: Pay My Credits screen (payment option "Pago requerido" con atraso)
+            Given I'm in "Pagar mis creditos" page
+            And I have the option to select the payment
+            When I click tooltip for "Pago requerido"
+            And the details are display
+            And click on the "X" to close it
+            And show corresponding amount
+            When select "Pago requerido"
+            And click on "Continuar"
+            Then land in "Pagar mis creditos" page
+            And the payment summary are display
+
+        Scenario: Pay My Credits screen (payment option "Pagar 2 semanas" con atraso)
+            Given I'm in "Pagar mis creditos" page
+            And I have the option to select the payment
+            When I click tooltip for "Pagar 2 semanas"
+            And the details are display
+            And click on the "X" to close it
+            And show corresponding amount
+            When select "Pagar 2 semanas"
+            And click on "Continuar"
+            Then land in "Pagar mis creditos" page
+            And the payment summary are display
+
+        Scenario: Pay My Credits screen (payment option "Pago para liquidar"con atraso)
+            Given I'm in "Pagar mis creditos" page
+            And I have the option to select the payment
+            When I click tooltip for "Pago para liquidar"
+            And the details are display
+            And click on the "X" to close it
+            And show corresponding amount
+            When I select "Pago para liquidar"
+            And click on "Continuar"
+            Then land in "Pagar mis creditos" page
+            And the payment summary are display
+    
         Scenario: Summaryscreen
             Given I'm in summary page
             And the payment summary are display
