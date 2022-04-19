@@ -1,15 +1,17 @@
 Feature: Recompra
 
-    Background: Recompra
-
+#agregar que no tenga un pedido en atraso
     Scenario: Banner at main screen
         Given Im at the main screen
-        And I have a suitable client for "Recompra"
+        And I have a suitable customer for "Recompra"
+        And I don't have delay periods
+        And I have capability payment
+        And not be an employee of "Grupo Salinas"
         When I scroll down
         And the product banner is display
         When click on the banner
         Then Best Offer screen is displayed
-    
+
 
     Scenario: Best Offer screen(Personalizar credito)
         Given I have i have click on continue in the Benefit page
@@ -37,7 +39,7 @@ Feature: Recompra
         And as you discrease the amount of weeks the amount in "Paga desde baz" change or if amount of week increases the amount in "Paga desde baz" changes
         Then the personalize credit with amount desire and period of time is display
         And click on the option "Lo quiero"
-        Then It lauch the "Credito en Efectivo" page
+        Then i should be at the "Credito en Efectivo" page
 
 
     Scenario: Best Offer screen(Continue with Best Offer)
@@ -60,7 +62,7 @@ Feature: Recompra
         And the option to edit is under "Editar"
         And the details "Monto", "Plazo", "Pago digital", "Pago semanal con descuento", "Pago semanal"
         When Slide the "baz" button to the right
-        Then It lauch the Face recognition journey
+        Then i should be at the Face recognition journey
 
     Scenario: Cash Credit screen(From Best Offer)
         Given I have land it in Summary page after clicking on "Lo quiero"
@@ -68,10 +70,10 @@ Feature: Recompra
         And the option to edit is under "Editar"
         And the details "Monto", "Plazo", "Pago digital", "Pago semanal con descuento", "Pago semanal"
         When Slide the "baz" button to the right
-        Then It lauch the Face recognition journey
-    
+        Then i should be at the Face recognition journey
+
     Scenario: Face recognition
-        Given I'm at the Face recognition Page
+        Given I'm at main of the Face recognition journey
         When I click on continue button
         And I click on continue button in Instruction screen number 1
         When I click on continue button in Instruction screen number 2
@@ -79,7 +81,7 @@ Feature: Recompra
         When I'm on the Face recognition screen
         And I click on continue button
         And I focus my face in the camera
-        When I verify the captured face is equal to evel's face
+        When I verify the captured face is equal to customers face
         And I click on continue in Identity Confirmed screen
         Then it will lauch the Keycode screen
 

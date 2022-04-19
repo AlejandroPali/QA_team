@@ -1,22 +1,20 @@
 Feature: Renovacion
 
-    Background: Renovacion
-
     Scenario: Banner at main screen
         Given Im at the main screen
-        And I have a suitable client for "Renovacion"
+        And I have a suitable customer for "Renovacion"
         When I scroll down
         And the product banner is display
         When click on the banner
-        Then it launch the Benefit screen
- 
+        Then i should be at the Benefit screen
+
     Scenario: Benefit screen
-        Given im at the Benefit screen 
+        Given im at the Benefit screen
         When i click on continue button
-        Then it launch the Face recognition journey
-    
-     Scenario: Face recognition
-        Given I'm at the Face recognition Page
+        Then i should be at the Face recognition journey
+
+    Scenario: Face recognition
+        Given I'm at main of the Face recognition journey
         When I click on continue button
         And I click on continue button in Instruction screen number 1
         When I click on continue button in Instruction screen number 2
@@ -24,7 +22,7 @@ Feature: Renovacion
         When I'm on the Face recognition screen
         And I click on continue button
         And I focus my face in the camera
-        When I verify the captured face is equal to evel's face
+        When I verify the captured face is equal to customers face
         And I click on continue in Identity Confirmed screen
         Then it will lauch the Best Offer screen
 
@@ -53,7 +51,7 @@ Feature: Renovacion
         And as you discrease the amount of weeks the amount in "Paga desde baz" change or if amount of week increases the amount in "Paga desde baz" changes
         Then the personalize credit with amount desire and period of time is display
         And click on the option "Lo quiero"
-        Then It lauch the summary page
+        Then i should be at the summary page
 
     Scenario: Summary screen(From Personalized credit)
         Given I have land it in Summary page after clicking on "Lo quiero"
@@ -61,7 +59,7 @@ Feature: Renovacion
         And the option to edit is under "Editar"
         And the details "Monto", "Plazo", "Pago digital", "Pago semanal con descuento", "Pago semanal"
         When Slide the "baz" button to the right
-        Then It lauch the Keycode screen
+        Then i should be at the Keycode screen
 
     Scenario Outline: Keycode screen
         Given I have land in the Clave page after
@@ -83,4 +81,4 @@ Feature: Renovacion
         When click on "salir"
         Then you will exit
         And receive an email
-    
+

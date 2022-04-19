@@ -1,7 +1,5 @@
 Feature: BNPL
 
-    Background: BNPL
-
     Scenario: main screen
 
         Given I'm at the main screen
@@ -9,7 +7,7 @@ Feature: BNPL
         And Í have a QR code
         When the camera by captured QR is displayed
         And I Capture the QR
-        Then It lauch the "Clave" page
+        Then i should be at the "Clave" page
 
     Scenario Outline: Keycode screen
 
@@ -29,7 +27,10 @@ Feature: BNPL
     Scenario Outline: How much do you want to pay? screen
 
         Given I'm at the "¿Cuanto quieres pagar?" page
-        And I have a suitable client for BNPL
+        And I have a suitable customer for BNPL
+        And I don't have delay periods
+        And I have capability payment
+        And not be an employee of "Grupo Salinas"
         When I introduce amount to <amount>
         And amount is between 100 and 70000
         When click on continue button
@@ -63,11 +64,10 @@ Feature: BNPL
         When I select pay later
         And pay later options ar "4 payments" or "8 payments" or "10 payments"
         When i click on continue button
-        Then It lauch the Face recognition journey
+        Then i should be at the Face recognition journey
 
     Scenario: Face recognition
-
-        Given I'm at the Face recognition Page
+        Given I'm at main of the Face recognition journey
         When I click on continue button
         And I click on continue button in Instruction screen number 1
         When I click on continue button in Instruction screen number 2
@@ -75,14 +75,14 @@ Feature: BNPL
         When I'm on the Face recognition screen
         And I click on continue button
         And I focus my face in the camera
-        When I verify the captured face is equal to Evel's face
+        When I verify the captured face is equal to customers face
         And I click on continue in Identity Confirmed screen
         Then the "Resumen" page is display
 
     Scenario: Payment summary with QR
         Given I'm at the Summary screen
         When I swipe to the right the "baz" button
-        Then It lauch the "Clave" page
+        Then i should be at the "Clave" page
 
     Scenario Outline: Second Keycode screen
         Given I have land in the Clave page after
