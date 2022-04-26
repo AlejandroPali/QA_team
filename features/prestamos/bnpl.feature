@@ -11,7 +11,7 @@ Feature: BNPL
 
     Scenario Outline: Keycode screen
 
-        Given I have land in the Clave page after
+        Given I have land at the Clave page after
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code
@@ -69,14 +69,14 @@ Feature: BNPL
     Scenario: Face recognition
         Given I'm at main of the Face recognition journey
         When I click on continue button
-        And I click on continue button in Instruction screen number 1
-        When I click on continue button in Instruction screen number 2
-        And I click on continue button in Instruction screen number 3
+        And I click on continue button at Instruction screen number 1
+        When I click on continue button at Instruction screen number 2
+        And I click on continue button at Instruction screen number 3
         When I'm on the Face recognition screen
         And I click on continue button
-        And I focus my face in the camera
+        And I focus my face at the camera
         When I verify the captured face is equal to customers face
-        And I click on continue in Identity Confirmed screen
+        And I click on continue at Identity Confirmed screen
         Then the "Resumen" page is display
 
     Scenario: Payment summary with QR
@@ -85,7 +85,7 @@ Feature: BNPL
         Then i should be at the "Clave" page
 
     Scenario Outline: Second Keycode screen
-        Given I have land in the Clave page after
+        Given I have land at the Clave page after
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code

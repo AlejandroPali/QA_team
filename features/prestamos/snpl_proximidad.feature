@@ -9,7 +9,7 @@ Feature: SNPL Proximidad
     Scenario: Who do you send? screen
         Given i'm at Who do you send? screen
         And i see the user to  I will send money
-        When i click on user
+        When i click at user
         Then i should be at the How much do you want to pay? screen
 
     Scenario Outline: How much do you want to pay? screen
@@ -22,7 +22,7 @@ Feature: SNPL Proximidad
         When I introduce amount to <amount>
         And amount is between 100 and 70000
         And account is equals to baz account
-        When click on continue button
+        When click at continue button
         Then it will lauch the "Elige modo de envío" page
 
         Examples:
@@ -48,19 +48,19 @@ Feature: SNPL Proximidad
 
     Scenario: Face recognition
         Given I'm at the Face recognition Page
-        When I click on continue button
-        And I click on continue button in Instruction screen number 1
-        When I click on continue button in Instruction screen number 2
-        And I click on continue button in Instruction screen number 3
-        When I'm on the Face recognition screen
-        And I click on continue button
-        And I focus my face in the camera
+        When I click at continue button
+        And I click at continue button at Instruction screen number 1
+        When I click at continue button at Instruction screen number 2
+        And I click at continue button at Instruction screen number 3
+        When I'm at the Face recognition screen
+        And I click at continue button
+        And I focus my face at the camera
         When I verify the captured face is equal to evel's face
-        And I click on continue in Identity Confirmed screen
+        And I click at continue at Identity Confirmed screen
         Then i should be at the "Clave" page
 
     Scenario Outline: Second Keycode screen
-        Given I have land in the Clave page after
+        Given I have land at the Clave page after
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code

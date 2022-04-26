@@ -26,7 +26,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account is to baz account
         And the account is equal to  14 positions
-        And click on continuar
+        And click at continuar
         Then i should be at the Confirmed page
 
         Examples:
@@ -40,7 +40,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account is to baz account
         And the account is equal to  18 positions
-        And click on continuar
+        And click at continuar
         Then i should be at the Confirmed page
 
         Examples:
@@ -54,7 +54,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account is to baz account
         And the account is equal to  16 positions
-        And click on continuar
+        And click at continuar
         Then i should be at the Confirmed page
 
         Examples:
@@ -68,7 +68,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account is to baz account
         And the account is equal to  10 positions
-        And click on continuar
+        And click at continuar
         Then i should be at the Confirmed page
 
         Examples:
@@ -83,7 +83,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account isn't to baz account
         And the account is equal to 18 positions
-        And click on continuar
+        And click at continuar
         Then i should be at the Confirmed page
 
         Examples:
@@ -97,7 +97,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account isn't to baz account
         And the account is equal to 16 positions
-        And click on continuar
+        And click at continuar
         Then i should be at the Confirmed page
 
         Examples:
@@ -108,14 +108,14 @@ Feature: SNPL envío a cuentas
     Scenario: Confirmed screen with customer information
         Given i'm at the Confirmed screen
         When I can see the customer information
-        And I click on button continue
+        And I click at button continue
         Then i should be at the"¿Cuanto quieres pagar?" page
 
     Scenario Outline: Confirmed without customer information
         Given i'm at the Confirmed screen
         And I can't see the customer information
         When I introduce the customer information to <customer>
-        And I click on button continue
+        And I click at button continue
         Then i should be at the"¿Cuanto quieres pagar?" page
         Examples:
             | customer         |
@@ -132,7 +132,7 @@ Feature: SNPL envío a cuentas
         When I introduce amount to <amount>
         And amount is between 100 and 70000
         And account is equals to baz account
-        When click on continue button
+        When click at continue button
         Then it will lauch the "Elige modo de envío" page
 
         Examples:
@@ -158,19 +158,19 @@ Feature: SNPL envío a cuentas
 
     Scenario: Face recognition
         Given I'm at main of the Face recognition journey
-        When I click on continue button
-        And I click on continue button in Instruction screen number 1
-        When I click on continue button in Instruction screen number 2
-        And I click on continue button in Instruction screen number 3
-        When I'm on the Face recognition screen
-        And I click on continue button
-        And I focus my face in the camera
+        When I click at continue button
+        And I click at continue button at Instruction screen number 1
+        When I click at continue button at Instruction screen number 2
+        And I click at continue button at Instruction screen number 3
+        When I'm at the Face recognition screen
+        And I click at continue button
+        And I focus my face at the camera
         When I verify the captured face is equal to customers face
-        And I click on continue in Identity Confirmed screen
+        And I click at continue at Identity Confirmed screen
         Then i should be at the "Clave" page
 
     Scenario Outline: Second Keycode screen
-        Given I have land in the Clave page after
+        Given I have land at the Clave page after
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code

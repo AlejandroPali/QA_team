@@ -3,11 +3,11 @@ Feature: SNPL Chat
     Scenario: chat
         Given I'm at someone chat
         And i have a conversation before to sending money
-        When I click on send $
+        When I click at send $
         Then i should be at the "Envío de dinero" journey
 
     Scenario Outline: Second Keycode screen at the chat
-        Given I have land in the Clave page after
+        Given I have land at the Clave page after
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code
@@ -30,7 +30,7 @@ Feature: SNPL Chat
         When I introduce amount to <amount>
         And amount is between 100 and 70000
         And account is equals to baz account
-        When click on continue button
+        When click at continue button
         Then it will lauch the "Elige modo de envío" page
 
         Examples:
@@ -55,7 +55,7 @@ Feature: SNPL Chat
         Then i should be at the "Clave" page
 
     Scenario Outline: Second Keycode screen
-        Given I have land in the Clave page after
+        Given I have land at the Clave page after
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code
