@@ -11,8 +11,8 @@ Feature: SNPL Chat
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code
-        When click to enter the code a number pad is launch
-        And  enter keycode <clave>
+        When I click to enter the code a number pad is launch
+        And  I introduce the keycode <clave>
         Then the keycode is verify
         And it will lauch the ticket page
 
@@ -30,7 +30,7 @@ Feature: SNPL Chat
         When I introduce amount to <amount>
         And amount is between 100 and 70000
         And account is equals to baz account
-        When click at continue button
+        When I click at continue button
         Then it will lauch the "Elige modo de envío" page
 
         Examples:
@@ -59,8 +59,8 @@ Feature: SNPL Chat
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code
-        When click to enter the code a number pad is launch
-        And  enter keycode <clave>
+        When I click to enter the code a number pad is launch
+        And I introduce the keycode <clave>
         Then the keycode is verify
         And it will lauch the ticket page
 

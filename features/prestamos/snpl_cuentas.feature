@@ -26,7 +26,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account is to baz account
         And the account is equal to  14 positions
-        And click at continuar
+        And i click at continue button
         Then i should be at the Confirmed page
 
         Examples:
@@ -40,7 +40,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account is to baz account
         And the account is equal to  18 positions
-        And click at continuar
+        And i click at continue button
         Then i should be at the Confirmed page
 
         Examples:
@@ -54,7 +54,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account is to baz account
         And the account is equal to  16 positions
-        And click at continuar
+        And i click at continue button
         Then i should be at the Confirmed page
 
         Examples:
@@ -68,7 +68,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account is to baz account
         And the account is equal to  10 positions
-        And click at continuar
+        And i click at continue button
         Then i should be at the Confirmed page
 
         Examples:
@@ -83,7 +83,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account isn't to baz account
         And the account is equal to 18 positions
-        And click at continuar
+        And i click at continue button
         Then i should be at the Confirmed page
 
         Examples:
@@ -97,7 +97,7 @@ Feature: SNPL envío a cuentas
         When I introduce account to <account>
         And account isn't to baz account
         And the account is equal to 16 positions
-        And click at continuar
+        And i click at continue button
         Then i should be at the Confirmed page
 
         Examples:
@@ -108,14 +108,14 @@ Feature: SNPL envío a cuentas
     Scenario: Confirmed screen with customer information
         Given i'm at the Confirmed screen
         When I can see the customer information
-        And I click at button continue
+        And i click at continue button
         Then i should be at the"¿Cuanto quieres pagar?" page
 
     Scenario Outline: Confirmed without customer information
         Given i'm at the Confirmed screen
         And I can't see the customer information
         When I introduce the customer information to <customer>
-        And I click at button continue
+        And i click at continue button
         Then i should be at the"¿Cuanto quieres pagar?" page
         Examples:
             | customer         |
@@ -132,7 +132,7 @@ Feature: SNPL envío a cuentas
         When I introduce amount to <amount>
         And amount is between 100 and 70000
         And account is equals to baz account
-        When click at continue button
+        When i click at continue button
         Then it will lauch the "Elige modo de envío" page
 
         Examples:
@@ -174,8 +174,8 @@ Feature: SNPL envío a cuentas
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code
-        When click to enter the code a number pad is launch
-        And  enter keycode <clave>
+        When I click to enter the code a number pad is launch
+        And I introduce the keycode to <clave>
         Then the keycode is verify
         And it will lauch the ticket page
 

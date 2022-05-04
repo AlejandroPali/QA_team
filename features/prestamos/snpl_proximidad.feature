@@ -7,10 +7,10 @@ Feature: SNPL Proximidad
         Then i should be at the "Envía por cercania" journey
 
     Scenario: Who do you send? screen
-        Given i'm at Who do you send? screen
+        Given i'm at Who do I send? screen
         And i see the user to  I will send money
         When i click at user
-        Then i should be at the How much do you want to pay? screen
+        Then i should be at the How much do I want to pay? screen
 
     Scenario Outline: How much do you want to pay? screen
 
@@ -22,7 +22,7 @@ Feature: SNPL Proximidad
         When I introduce amount to <amount>
         And amount is between 100 and 70000
         And account is equals to baz account
-        When click at continue button
+        When i click at continue button
         Then it will lauch the "Elige modo de envío" page
 
         Examples:
@@ -64,8 +64,8 @@ Feature: SNPL Proximidad
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code
-        When click to enter the code a number pad is launch
-        And  enter keycode <clave>
+        When I click to enter the code a number pad is launch
+        And I introduce the keycode to <clave>
         Then the keycode is verify
         And it will lauch the ticket page
 

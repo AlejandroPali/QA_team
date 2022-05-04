@@ -1,7 +1,7 @@
 Feature: Dashboard_Credimax
 
     Scenario: Credit Dashboard
-        Given I'm at the "Dinero" dashboard
+        Given I'm at the main screen
         When I click at "credito"
         Then the personal credit details are display
 
@@ -10,10 +10,10 @@ Feature: Dashboard_Credimax
         And the details of personal credit are display
         When I click on the tooltip of "Pago Sugerido"
         And the details are display
-        And click on the "X" to close it
+        And I click on the "X" to close it
         When I scroll down
         And I click on "Pagar"
-        Then land at the "Pagar mis creditos" page
+        Then i should be at the "Pagar mis creditos" page
 
     Scenario: Automatic Charge Activation
         Given I'm at the "Credito" dashboard

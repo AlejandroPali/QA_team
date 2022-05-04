@@ -6,8 +6,25 @@ Feature: Cancelar_Cargo_Automatico
         And the setting is display
         When I slide button "Cancelación de Cargo Automatico"
         And the alert for for confimation of the cancelation of automatic charge
-        When click on "Si"
-        And land at the keycode page
-        When enter the keycode
-        And land at the success page
-        Then click on "Salir"
+        When I click on "Si" button
+        Then i should be at the "Clave" page
+
+
+    Scenario Outline: Keycode screen
+        Given I have land at the Clave page after
+        And I have a number path to enter 6 digits
+        And the message " Ingresar tu clave para continuar"
+        And the option "olvide mi clave" for those who forgot thir code
+        When I click to enter the code a number pad is launch
+        And I introduce the keycode to <clave>
+        Then the keycode is verify
+        And it will lauch the success page
+
+        Examples:
+            | clave  |
+            | 147369 |
+
+    Scenario: success screen
+        Given I'm at the success page
+        When I click on "Salir" button
+        Then i should be at the main screen

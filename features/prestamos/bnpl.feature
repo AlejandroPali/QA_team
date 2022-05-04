@@ -16,7 +16,7 @@ Feature: BNPL
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code
         When click to enter the code a number pad is launch
-        And  enter keycode <clave>
+        And I introduce the keycode to <clave>
         Then the keycode is verify
         And it will lauch the "¿Cuanto quieres pagar?" page
 
@@ -33,7 +33,7 @@ Feature: BNPL
         And not be an employee of "Grupo Salinas"
         When I introduce amount to <amount>
         And amount is between 100 and 70000
-        When click on continue button
+        When I click on continue button
         Then it will lauch the "¿Cómo lo quieres pagar?" page
 
         Examples:
@@ -89,8 +89,8 @@ Feature: BNPL
         And I have a number path to enter 6 digits
         And the message " Ingresar tu clave para continuar"
         And the option "olvide mi clave" for those who forgot thir code
-        When click to enter the code a number pad is launch
-        And  enter keycode <clave>
+        When I click to enter the code a number pad is launch
+        And I introduce the keycode to <clave>
         Then the keycode is verify
         And it will lauch the ticket page
 
